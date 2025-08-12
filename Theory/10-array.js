@@ -18,7 +18,8 @@ myArray.pop() //Deletes the last element
 // shift and unshift
 
 myArray.shift() //DElete the las element and move the elements to the left. (Like an dequeue in a queue)
-myArray.unshift("Element that will be in first postition", "Element that will be in second postition")
+myArray.unshift("Element that will be in first postition", 
+    "Element that will be in second postition")
 
 myArray.length // Is a value not a function in the array class in Javascript
 
