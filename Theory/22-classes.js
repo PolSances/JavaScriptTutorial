@@ -111,3 +111,63 @@ console.log(person33)
 console.log(person33.name)
 
 person33.bank = "new IBAN123"
+
+
+// Inheritance
+
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    sound(){
+        console.log("Emite un sonido")
+    }
+}
+
+
+class Dog extends Animal{
+
+    sound(){
+        console.log("Guau") // Overcharging a method
+    }
+
+
+    run(){
+        console.log("The dog runs")
+    }
+
+
+
+}
+
+
+class Fish extends Animal{
+
+    constructor(name, size){
+        super(name)
+        this.size = size
+    }
+}
+
+
+let myDog = new Dog("Pol's Dog")
+myDog.run()
+myDog.sound()
+
+
+let myFish = new Fish("Pol's Fish")
+myFish.sound()
+
+
+// Static Methods
+
+class MathOperations {
+    static sum(a,b){
+        return a + b
+    }
+}
+
+console.log(MathOperations.sum(5,10)) // It's a static method so we don't have to instatiate an element.
+
+
