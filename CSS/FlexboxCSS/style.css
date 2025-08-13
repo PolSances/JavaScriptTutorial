@@ -1,0 +1,41 @@
+body{
+    min-height: 800px;
+    border: 8px solid black; /* We can see the border of the body overflowing the elements */
+    display: flex;
+    
+    justify-content: center; 
+    /* Flex-start puts element at the left of the main axis,
+       end, just puts it a the max of the main axis,
+       center it just centers, centers the element,
+       space between, put it all with the same space
+       Space around is the same but without touching the borders
+       space-evenly all ways have the same space between without any exceptio
+    */
+    align-items: center;
+    /* This does the same but in the "y" axis 
+        here we have start, center , end too
+    */
+
+    /*flex-direction: column; */
+    /* row uses the display 1,2,3,4,5
+     row-reverse uses the display 5, 4, 3, 2 ,1
+    column-reverse puts them vertical 1 to 5
+    column reverse does the same as row reverse but for vertical axis
+    */
+    gap: 20px; /* Just creates a gap between the divs*/
+
+    flex-wrap: wrap; /* ust makes jump the divs to the other line (repsonsive) (no-wrap prevents it*/
+
+
+
+
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: #0071ff;
+    font-size: 40pt;
+}
+
+
