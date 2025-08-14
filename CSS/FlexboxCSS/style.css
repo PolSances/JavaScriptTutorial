@@ -24,18 +24,43 @@ body{
     */
     gap: 20px; /* Just creates a gap between the divs*/
 
-    flex-wrap: wrap; /* ust makes jump the divs to the other line (repsonsive) (no-wrap prevents it*/
+    /*flex-wrap: wrap; /* ust makes jump the divs to the other line (repsonsive) (nowrap) prevents it*/
 
+    /* Here we have a difference and is that if you use align-items every 
+       row has its axis and algin-content all the elements have the same axis.
+       */
+    align-content: center;
 
+    /* Here we also have two difrent types of gaps column-gap and row-gap that speak
+       by themselves. */
 
+    /* if you just want a responsive boxes UI you just put flex the gap and 
+       is all done */
 
 }
 
+#box-1{ /* With this is ID THE BOX doesn't resize. */
+    /*flex-shrink: 0;*/
+    flex-grow: 1;
+
+}
+
+
 .box{
+    flex-grow: 0 ; /* 0 don't grow 1 grows. */
+    /*flex-shrink: 1; The value permits o no the shrink and resize of the boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
     width: 200px;
     background-color: #0071ff;
-    font-size: 40pt;
+    font-size: 40pt;   
 }
-
+/* T avoid overflow by minimum width you can enable flex-wrap at smaller screens */
+@media(max-width: 575px) {
+    body{
+        flex-wrap: wrap;
+    }
+}
 
